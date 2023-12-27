@@ -9,6 +9,12 @@ TOKEN="discord botのトークン"
 APPID="天気apiのappid"
 ```
 
+## pip
+
+```bash
+pip3 install -r requirements.txt
+```
+
 ## 実行
 
 ```bash
