@@ -42,13 +42,13 @@ async def on_message(message: discord.Message):
     # メッセージが"hello"だった場合、"Hello!"と返信する
     if message.content == 'hello':
         await message.reply("Hello!")
-    
+
     if message.content == 'ez':
         await message.reply("ナイスゲーム！みんなこれからも頑張ってね！")
 
     if message.content == 'lol':
         await message.reply("うん、やっぱ楽しくプレイすることが何よりも大事だよね")
-        
+
     for i in snsUrl:
         if i in message.content:
             result = "これ凄いな。。。"
