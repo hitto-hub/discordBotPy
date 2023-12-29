@@ -25,6 +25,11 @@ snsUrl =    ["www.youtube.com/shorts/",
             "https://twitter.com/",
             "https://www.tiktok.com/",]
 
+hands = [
+    "gu",
+    "chi",
+    "pa"
+]
 
 # 起動時に自動的に動くメソッド
 @bot.event
@@ -113,7 +118,7 @@ async def list(ctx: discord.ApplicationContext, password: discord.Option(str, "�
 # jyankennコマンドを実装
 # 絶対に勝てません。
 @bot.command(name="jyankenn", description="じゃんけんを行います")
-async def jyankenn(ctx: discord.ApplicationContext, hand: discord.Option(str, "手を入力してください(gu, chi, pa)")):
+async def jyankenn(ctx: discord.ApplicationContext, hand: discord.Option(str, "手を入力してください(gu, chi, pa)", choices=hands)):
     if hand == "gu":
         await ctx.respond(f"あなたの手は **ぐー** ですね！\n私の手は **ぱー** です！\nhttps://img.gifmagazine.net/gifmagazine/images/3585293/original.mp4")
     elif hand == "chi":
